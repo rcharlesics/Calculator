@@ -1,0 +1,21 @@
+{
+    "defaultTheme": "DefaultTheme",
+    "themes": [
+        {
+            "name": "DefaultTheme",
+            "themeObjectPath": "qrc:/Themes/ValidationFlow/DefaultTheme.qml"
+        },
+        {
+            "name": "AltTheme",
+            "themeObjectPath": "qrc:/Themes/ValidationFlow/AltTheme.qml"
+        },
+        {
+            "name": "InvalidTheme",
+            "themeObjectPath": "qrc:/Themes/ValidationFlow/InvalidTheme.qml"
+        },
+        {
+            "name": "MalformedTheme",
+            "themeObjectPath": "qrc:/Themes/ValidationFlow/MalformedTheme.invalid"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "source": "MainView",
+    "target": "MainViewHidden",
+    "transitions": [
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": true,
+                "internal": true,
+                "sender": "SurfaceController",
+                "senderStringType": "%1",
+                "signal": "hideMainView"
+            },
+            "template": "SignalTransition"
+        }
+    ]
+}

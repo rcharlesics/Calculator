@@ -1,0 +1,21 @@
+{
+    "children": [
+    ],
+    "childrenSplit": true,
+    "extraData": {
+        "orderValue": 0
+    },
+    "height": 0,
+    "posX": 0,
+    "posY": 0,
+    "properties": {
+        "childViewType": "ChildStateView",
+        "initial": true,
+        "name": "MainViewHidden",
+        "parallel": false,
+        "parentingEnabled": true,
+        "preloadUI": false
+    },
+    "template": "State",
+    "width": 0
+}

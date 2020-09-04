@@ -1,0 +1,57 @@
+[
+    {
+        "bold": false,
+        "family": "Droid Sans",
+        "italic": false,
+        "name": "textFont",
+        "pixelSize": 24,
+        "strikeOut": false,
+        "styleName": "Regular",
+        "underline": false,
+        "weight": 50
+    },
+    {
+        "bold": false,
+        "family": "Droid Sans",
+        "italic": false,
+        "name": "buttonFont",
+        "pixelSize": 18,
+        "strikeOut": false,
+        "styleName": "Regular",
+        "underline": false,
+        "weight": 50
+    },
+    {
+        "bold": true,
+        "family": "Droid Sans Mono",
+        "italic": false,
+        "name": "idleButtonFont",
+        "pixelSize": 40,
+        "strikeOut": false,
+        "styleName": "Regular",
+        "underline": false,
+        "weight": 75
+    },
+    {
+        "bold": false,
+        "family": "Droid Sans Mono",
+        "italic": true,
+        "name": "viewText",
+        "pixelSize": 64,
+        "strikeOut": false,
+        "styleName": "Regular",
+        "underline": false,
+        "weight": 50
+    },
+    {
+        "bold": false,
+        "family": "Droid Sans",
+        "italic": false,
+        "name": "spinBoxFont",
+        "pixelSize": 64,
+        "strikeOut": false,
+        "styleName": "Regular",
+        "underline": false,
+        "weight": 50
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "bold": false,
+        "capitalization": 0,
+        "family": "Droid Sans",
+        "italic": false,
+        "name": "textFont",
+        "pixelSize": 24,
+        "strikeOut": false,
+        "styleName": "Regular",
+        "underline": false,
+        "weight": 50
+    },
+    {
+        "bold": false,
+        "capitalization": 0,
+        "family": "Droid Sans",
+        "italic": false,
+        "name": "buttonFont",
+        "pixelSize": 16,
+        "strikeOut": false,
+        "styleName": "Regular",
+        "underline": false,
+        "weight": 50
+    },
+    {
+        "bold": false,
+        "capitalization": 0,
+        "family": "Droid Sans",
+        "italic": false,
+        "name": "spinBoxFont",
+        "pixelSize": 64,
+        "strikeOut": false,
+        "styleName": "Regular",
+        "underline": false,
+        "weight": 50
+    },
+    {
+        "bold": false,
+        "capitalization": 0,
+        "family": "Digital Numbers",
+        "italic": false,
+        "name": "Figma::Digital Numbers_DigitalNumbers-Regular_12_50_0_0",
+        "pixelSize": 12,
+        "strikeOut": false,
+        "styleName": "DigitalNumbers-Regular",
+        "underline": false,
+        "weight": 50
+    },
+    {
+        "bold": false,
+        "capitalization": 0,
+        "family": "Digital Numbers",
+        "italic": false,
+        "name": "Figma::Digital Numbers_DigitalNumbers-Regular_16_50_0_0",
+        "pixelSize": 16,
+        "strikeOut": false,
+        "styleName": "DigitalNumbers-Regular",
+        "underline": false,
+        "weight": 50
+    },
+    {
+        "bold": false,
+        "capitalization": 0,
+        "family": "Digital Numbers",
+        "italic": false,
+        "name": "Figma::Digital Numbers_DigitalNumbers-Regular_9_50_0_0",
+        "pixelSize": 9,
+        "strikeOut": false,
+        "styleName": "DigitalNumbers-Regular",
+        "underline": false,
+        "weight": 50
+    }
+]

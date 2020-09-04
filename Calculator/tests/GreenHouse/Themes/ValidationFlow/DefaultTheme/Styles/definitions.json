@@ -1,0 +1,38 @@
+{
+    "button": {
+        "_typehits_": {
+            "borderWidth": 3,
+            "radius": 3,
+            "backgroundColor": 0,
+            "backgroundAsset": 4,
+            "buttonTextFont": 1,
+            "someText": 2
+        },
+        "borderWidth": 3,
+        "radius": 0,
+        "backgroundColor": "buttonDark",
+        "backgroundAsset": "GHLogoBig.png",
+        "buttonTextFont": "buttonFont",
+        "someText": "lorem impsum",
+        "anonymousFont": "buttonFont",
+        "anonymousColor": "buttonDark"
+    },
+    "button:hover": {
+    },
+    "button:pressed": {
+        "_typehits_": {
+            "borderWidth": 3,
+            "radius": 3
+        },
+        "borderWidth": 2,
+        "radius": 0
+    },
+    "panel": {
+        "_typehits_": {
+            "horizontalPadding": 3,
+            "verticalPadding": 3
+        },
+        "horizontalPadding": 5,
+        "verticalPadding": 5
+    }
+}

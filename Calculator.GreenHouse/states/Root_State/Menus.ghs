@@ -1,0 +1,22 @@
+{
+    "childrenSplit": true,
+    "extraData": {
+        "ReadOnly": true,
+        "orderValue": 3
+    },
+    "height": 0,
+    "posX": 0,
+    "posY": 0,
+    "properties": {
+        "childViewType": "ChildStateView",
+        "initial": false,
+        "layerZ": 5,
+        "name": "Menus",
+        "parallel": false,
+        "parentingEnabled": true,
+        "preloadUI": false
+    },
+    "template": "LayerState",
+    "uuid": "{cb22bc2a-f3c3-4868-a43b-654f0790ffed}",
+    "width": 0
+}

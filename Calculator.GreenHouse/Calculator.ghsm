@@ -1,0 +1,29 @@
+{
+    "alternativeLayoutScreenSize": {
+    },
+    "alternativeLayouts": [
+    ],
+    "defaultTheme": "DefaultTheme",
+    "extraData": {
+    },
+    "interfaceIdRangeStart": 0,
+    "interfacesFile": "interfaces",
+    "layoutAnimations": [
+    ],
+    "layoutInterfacesFile": "layoutInterfaces",
+    "layoutScreenSize": {
+        "height": 328,
+        "width": 502
+    },
+    "layoutsFile": "layouts",
+    "projectPrefix": "",
+    "standaloneThemes": false,
+    "statesFile": "states",
+    "testingFile": "testing",
+    "transitionsFile": "transitionGroups",
+    "versionData": {
+        "major": 1,
+        "minor": 3,
+        "patch": 6
+    }
+}

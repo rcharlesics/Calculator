@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Themes/ValidationFlow/AltTheme.qml</file>
+        <file>Themes/ValidationFlow/AltTheme/Colors/definitions.json</file>
+        <file>Themes/ValidationFlow/AltTheme/Styles/definitions.json</file>
+        <file>Themes/ValidationFlow/AltTheme/config.json</file>
+        <file>Themes/ValidationFlow/DefaultTheme.qml</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Colors/definitions.json</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/Apache License.txt</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/DroidSans.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/DroidSansMono.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/DroidSerif.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-Bold.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-BoldItalic.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-ExtraBold.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-ExtraBoldItalic.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-Italic.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-Light.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-LightItalic.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-Regular.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-SemiBold.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/OpenSans-SemiBoldItalic.ttf</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Fonts/definitions.json</file>
+        <file>Themes/ValidationFlow/DefaultTheme/GHLogoBig.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/GHLogoBigshadowColor.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/GHLogoBigshadowRectColor.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/Styles/definitions.json</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_00.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_01.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_02.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_03.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_04.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_05.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_06.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_07.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_08.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_09.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/animation/ghlogo_10.png</file>
+        <file>Themes/ValidationFlow/DefaultTheme/config.json</file>
+        <file>Themes/ValidationFlow/InvalidTheme.qml</file>
+        <file>Themes/ValidationFlow/MalformedTheme.invalid</file>
+        <file>Themes/ValidationFlow/config.json</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,41 @@
+{
+    "children": [
+    ],
+    "childrenSplit": true,
+    "entryActions": [
+        {
+            "rawCode": "{\nCONTEXT_OBJECT(SurfaceController, sc)\nsc->surfaceMainViewMoveToMainView_MainView();\n}\n",
+            "type": 0
+        },
+        {
+            "rawCode": "",
+            "type": 0
+        }
+    ],
+    "exitActions": [
+        {
+            "rawCode": "",
+            "type": 0
+        }
+    ],
+    "extraData": {
+        "FIGMA": "W8dLtfOaonKKKRR69Qb9hC",
+        "ScreenState": true,
+        "orderValue": 0
+    },
+    "height": 0,
+    "posX": 0,
+    "posY": 0,
+    "properties": {
+        "EmptyState": true,
+        "childViewType": "ChildStateView",
+        "initial": true,
+        "name": "MainView_ScreenState",
+        "parallel": false,
+        "parentingEnabled": true,
+        "preloadUI": false
+    },
+    "template": "State",
+    "uuid": "{455b1e71-e20c-4481-b6cb-d52e8f3902ec}",
+    "width": 0
+}

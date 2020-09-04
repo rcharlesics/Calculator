@@ -1,0 +1,6 @@
+module Calculator
+
+NumberButton_Default_State 1.0 NumberButton_Default_State.qml
+EmptyButton_Default_State 1.0 EmptyButton_Default_State.qml
+LargerButton_Default_State 1.0 LargerButton_Default_State.qml
+DisplayLabel_Default_State 1.0 DisplayLabel_Default_State.qml

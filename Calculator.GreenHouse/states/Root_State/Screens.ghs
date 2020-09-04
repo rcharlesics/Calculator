@@ -1,0 +1,23 @@
+{
+    "childrenSplit": true,
+    "extraData": {
+        "ReadOnly": true,
+        "Screens": true,
+        "orderValue": 0
+    },
+    "height": 0,
+    "posX": 0,
+    "posY": 0,
+    "properties": {
+        "childViewType": "ChildStateView",
+        "initial": false,
+        "layerZ": 0,
+        "name": "Screens",
+        "parallel": false,
+        "parentingEnabled": true,
+        "preloadUI": false
+    },
+    "template": "LayerState",
+    "uuid": "{0c3d4b14-f5ee-4f7c-9fcd-f94bf71ab2df}",
+    "width": 0
+}

@@ -1,0 +1,16 @@
+module Decorative
+
+AnimatedImage 1.0 AnimatedImage.qml
+BlurredText 1.0 BlurredText.qml
+ColoredBorderImage 1.0 ColoredBorderImage.qml
+ColoredImage 1.0 ColoredImage.qml
+CoverSwitcher 1.0 CoverSwitcher.qml
+DecoratedItem 1.0 DecoratedItem.qml
+DropShadowRectangle 1.0 DropShadowRectangle.qml
+GlowingText 1.0 GlowingText.qml
+GradientText 1.0 GradientText.qml
+InnerShadowRectangle 1.0 InnerShadowRectangle.qml
+RectangularShadow 1.0 RectangularShadow.qml
+RoundCornerClipper 1.0 RoundCornerClipper.qml
+RoundCornerRectangle 1.0 RoundCornerRectangle.qml
+TextRibbon 1.0 TextRibbon.qml

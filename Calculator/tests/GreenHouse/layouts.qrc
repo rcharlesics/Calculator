@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>layouts/animations/HomeLayoutHideAnimation.qml</file>
+        <file>layouts/animations/HomeLayoutInitAnimation.qml</file>
+        <file>layouts/animations/HomeLayoutShowAnimation.qml</file>
+        <file>layouts/primary/HomeLayoutImpl.qml</file>
+        <file>layouts/private/HomeIFace.qml</file>
+        <file>layouts/private/HomeLayout.qml</file>
+        <file>layouts/secondary/HomeLayoutImpl.qml</file>
+        <file>layouts/primary/IntroLayoutImpl.qml</file>
+        <file>layouts/secondary/IntroLayoutImpl.qml</file>
+        <file>layouts/primary/HomeBase.qml</file>
+        <file>layouts/secondary/HomeBase.qml</file>
+    </qresource>
+</RCC>

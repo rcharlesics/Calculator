@@ -1,0 +1,22 @@
+{
+    "children": [
+    ],
+    "childrenSplit": true,
+    "extraData": {
+        "ReadOnly": true,
+        "orderValue": 0
+    },
+    "height": 0,
+    "posX": 0,
+    "posY": 0,
+    "properties": {
+        "childViewType": "ChildStateView",
+        "initial": false,
+        "name": "PopupsHidden",
+        "parallel": false,
+        "parentingEnabled": true,
+        "preloadUI": false
+    },
+    "template": "State",
+    "width": 0
+}

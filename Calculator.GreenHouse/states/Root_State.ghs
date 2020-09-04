@@ -1,0 +1,19 @@
+{
+    "childrenSplit": true,
+    "extraData": {
+        "orderValue": 0
+    },
+    "height": 193,
+    "posX": 115,
+    "posY": 53,
+    "properties": {
+        "childViewType": "ChildStateView",
+        "initial": true,
+        "name": "Root_State",
+        "parallel": true,
+        "parentingEnabled": true,
+        "preloadUI": false
+    },
+    "template": "State",
+    "width": 139.109375
+}

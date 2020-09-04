@@ -1,0 +1,161 @@
+[
+    {
+        "colorA": 255,
+        "colorB": 59,
+        "colorG": 59,
+        "colorR": 59,
+        "name": "textColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 152,
+        "colorG": 152,
+        "colorR": 152,
+        "name": "buttonTextColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 39,
+        "colorG": 39,
+        "colorR": 39,
+        "foreground": {
+            "colorA": 255,
+            "colorB": 152,
+            "colorG": 152,
+            "colorR": 152
+        },
+        "name": "buttonDark"
+    },
+    {
+        "colorA": 255,
+        "colorB": 39,
+        "colorG": 39,
+        "colorR": 39,
+        "name": "buttonLight"
+    },
+    {
+        "colorA": 255,
+        "colorB": 75,
+        "colorG": 75,
+        "colorR": 75,
+        "name": "panelColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 75,
+        "colorG": 75,
+        "colorR": 75,
+        "foreground": {
+            "colorA": 255,
+            "colorB": 152,
+            "colorG": 152,
+            "colorR": 152
+        },
+        "name": "panelColor2"
+    },
+    {
+        "colorA": 255,
+        "colorB": 128,
+        "colorG": 128,
+        "colorR": 128,
+        "name": "alternativePanelColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 30,
+        "colorG": 171,
+        "colorR": 127,
+        "name": "aBackground"
+    },
+    {
+        "colorA": 255,
+        "colorB": 171,
+        "colorG": 145,
+        "colorR": 28,
+        "name": "bBackground"
+    },
+    {
+        "colorA": 255,
+        "colorB": 171,
+        "colorG": 26,
+        "colorR": 111,
+        "name": "cBackground"
+    },
+    {
+        "colorA": 255,
+        "colorB": 50,
+        "colorG": 50,
+        "colorR": 50,
+        "name": "idleBackground"
+    },
+    {
+        "colorA": 255,
+        "colorB": 255,
+        "colorG": 255,
+        "colorR": 255,
+        "name": "idleButtonTextColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 143,
+        "colorG": 31,
+        "colorR": 168,
+        "name": "bLeftBackground"
+    },
+    {
+        "colorA": 255,
+        "colorB": 19,
+        "colorG": 79,
+        "colorR": 168,
+        "name": "bRightBackground"
+    },
+    {
+        "colorA": 128,
+        "colorB": 32,
+        "colorG": 32,
+        "colorR": 32,
+        "name": "shadowColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 0,
+        "colorG": 0,
+        "colorR": 255,
+        "name": "shadowRectColor"
+    },
+    {
+        "colorA": 128,
+        "colorB": 255,
+        "colorG": 255,
+        "colorR": 255,
+        "name": "glowColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 23,
+        "colorG": 23,
+        "colorR": 23,
+        "name": "spinBoxTextColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 255,
+        "colorG": 255,
+        "colorR": 255,
+        "name": "innerShadowRectColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 47,
+        "colorG": 175,
+        "colorR": 109,
+        "name": "circularProgressColor"
+    },
+    {
+        "colorA": 255,
+        "colorB": 141,
+        "colorG": 140,
+        "colorR": 127,
+        "name": "circularProgressBackgroundColor"
+    }
+]

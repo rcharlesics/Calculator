@@ -1,0 +1,98 @@
+{
+    "childrenSplit": true,
+    "id": "fi_DisplayLabel",
+    "properties": [
+        {
+            "name": "x",
+            "type": 4,
+            "value": 70
+        },
+        {
+            "name": "y",
+            "type": 4,
+            "value": 39
+        },
+        {
+            "name": "z",
+            "type": 4,
+            "value": 27
+        },
+        {
+            "name": "width",
+            "type": 4,
+            "value": 340
+        },
+        {
+            "name": "height",
+            "type": 4,
+            "value": 41
+        },
+        {
+            "name": "opacity",
+            "type": 6,
+            "value": 1
+        },
+        {
+            "name": "enabled",
+            "type": 7,
+            "value": true
+        },
+        {
+            "name": "visible",
+            "type": 7,
+            "value": true
+        },
+        {
+            "name": "clip",
+            "type": 7,
+            "value": false
+        },
+        {
+            "name": "fi_EntryText_horizontalAlignment",
+            "type": 133,
+            "value": 2
+        },
+        {
+            "name": "fi_EntryText_labelColor",
+            "type": 131,
+            "value": "Figma::255_0_0_0"
+        },
+        {
+            "name": "fi_EntryText_opacity",
+            "type": 6,
+            "value": 1
+        },
+        {
+            "name": "fi_EntryText_text",
+            "type": 10,
+            "value": "0."
+        },
+        {
+            "name": "fi_EntryText_verticalAlignment",
+            "type": 134,
+            "value": 128
+        },
+        {
+            "name": "fi_Outline_color",
+            "type": 131,
+            "value": "buttonAltTextColor"
+        },
+        {
+            "name": "fi_Outline_opacity",
+            "type": 6,
+            "value": 1
+        },
+        {
+            "name": "rotation",
+            "type": 6,
+            "value": 0
+        },
+        {
+            "name": "scale",
+            "type": 6,
+            "value": 1
+        }
+    ],
+    "type": "CalculatorSet.DisplayLabel_Default_State",
+    "userDefined": false
+}

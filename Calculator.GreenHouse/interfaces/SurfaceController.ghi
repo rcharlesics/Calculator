@@ -1,0 +1,31 @@
+{
+    "backendObject": true,
+    "hidden": true,
+    "name": "SurfaceController",
+    "signals": [
+        {
+            "name": "showPopups"
+        },
+        {
+            "name": "hidePopups"
+        },
+        {
+            "name": "showMenus"
+        },
+        {
+            "name": "hideMenus"
+        },
+        {
+            "name": "surfaceMenusBack"
+        },
+        {
+            "name": "showMainView"
+        },
+        {
+            "name": "hideMainView"
+        },
+        {
+            "name": "surfaceMainViewMoveToMainView_MainView"
+        }
+    ]
+}

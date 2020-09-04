@@ -1,0 +1,63 @@
+{
+    "childrenSplit": true,
+    "id": "fi_EmptyButton",
+    "properties": [
+        {
+            "name": "x",
+            "type": 4,
+            "value": 70
+        },
+        {
+            "name": "y",
+            "type": 4,
+            "value": 97
+        },
+        {
+            "name": "z",
+            "type": 4,
+            "value": 28
+        },
+        {
+            "name": "width",
+            "type": 4,
+            "value": 47
+        },
+        {
+            "name": "height",
+            "type": 4,
+            "value": 34
+        },
+        {
+            "name": "opacity",
+            "type": 6,
+            "value": 1
+        },
+        {
+            "name": "enabled",
+            "type": 7,
+            "value": true
+        },
+        {
+            "name": "visible",
+            "type": 7,
+            "value": true
+        },
+        {
+            "name": "clip",
+            "type": 7,
+            "value": false
+        },
+        {
+            "name": "rotation",
+            "type": 6,
+            "value": 0
+        },
+        {
+            "name": "scale",
+            "type": 6,
+            "value": 1
+        }
+    ],
+    "type": "CalculatorSet.EmptyButton_Default_State",
+    "userDefined": false
+}

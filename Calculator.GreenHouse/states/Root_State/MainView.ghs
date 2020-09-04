@@ -1,0 +1,21 @@
+{
+    "childrenSplit": true,
+    "extraData": {
+        "Panel": true,
+        "orderValue": 3
+    },
+    "height": 0,
+    "posX": 0,
+    "posY": 0,
+    "properties": {
+        "childViewType": "ChildStateView",
+        "initial": false,
+        "layerZ": 0,
+        "name": "MainView",
+        "parallel": false,
+        "parentingEnabled": true,
+        "preloadUI": false
+    },
+    "template": "LayerState",
+    "width": 0
+}

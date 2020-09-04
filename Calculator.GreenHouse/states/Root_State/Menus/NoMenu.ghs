@@ -1,0 +1,40 @@
+{
+    "children": [
+    ],
+    "childrenSplit": true,
+    "entryActions": [
+        {
+            "rawCode": "",
+            "type": 0
+        },
+        {
+            "rawCode": "",
+            "type": 0
+        }
+    ],
+    "exitActions": [
+        {
+            "rawCode": "",
+            "type": 0
+        }
+    ],
+    "extraData": {
+        "ReadOnly": true,
+        "orderValue": 1
+    },
+    "height": 0,
+    "posX": 0,
+    "posY": 0,
+    "properties": {
+        "EmptyState": true,
+        "childViewType": "ChildStateView",
+        "initial": true,
+        "name": "NoMenu",
+        "parallel": false,
+        "parentingEnabled": true,
+        "preloadUI": false
+    },
+    "template": "State",
+    "uuid": "{9aec9c7e-f02e-4724-af07-27acc5e1760d}",
+    "width": 0
+}

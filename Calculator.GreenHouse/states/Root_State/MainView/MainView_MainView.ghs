@@ -1,0 +1,40 @@
+{
+    "children": [
+    ],
+    "childrenSplit": true,
+    "entryActions": [
+        {
+            "rawCode": "",
+            "type": 0
+        },
+        {
+            "rawCode": "",
+            "type": 0
+        }
+    ],
+    "exitActions": [
+        {
+            "rawCode": "",
+            "type": 0
+        }
+    ],
+    "extraData": {
+        "FIGMA": "W8dLtfOaonKKKRR69Qb9hC",
+        "orderValue": 1
+    },
+    "height": 0,
+    "posX": 0,
+    "posY": 0,
+    "properties": {
+        "childViewType": "ChildStateView",
+        "initial": false,
+        "layoutFile": "MainView_MainViewLayout",
+        "layoutFileTemplate": "%1Impl.qml",
+        "name": "MainView_MainView",
+        "parallel": false,
+        "parentingEnabled": true,
+        "preloadUI": false
+    },
+    "template": "ItemState",
+    "width": 0
+}

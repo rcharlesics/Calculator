@@ -1,0 +1,19 @@
+{
+    "blockInputFallthrough": true,
+    "childrenSplit": true,
+    "fillParent": false,
+    "height": 328,
+    "hideAnimation": {
+        "type": 0
+    },
+    "interfaceName": "MainView_MainViewIFace",
+    "name": "MainView_MainViewLayout",
+    "posX": 0,
+    "posY": 0,
+    "rootContainerType": 0,
+    "showAnimation": {
+        "type": 0
+    },
+    "uuid": "{bb5c2013-e2bb-4cb5-af88-5c4ba42b6bfe}",
+    "width": 502
+}
