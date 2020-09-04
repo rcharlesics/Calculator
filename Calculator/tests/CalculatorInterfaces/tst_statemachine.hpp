@@ -12,6 +12,7 @@
 #include <Calculator/statemachinefactory.hpp>
 #include <Calculator/remoteiteminterfaces.hpp>
 #include <Calculator/surfacecontroller.hpp>
+#include <Calculator/display.hpp>
 
 
 using namespace testing;
@@ -46,6 +47,7 @@ void StateMachineFactory::TearDown()
 TEST_F(StateMachineFactory, InitializedContextExecutionStart)
 {
     context->store(new Calculator::SurfaceController);
+    context->store(new Calculator::Display);
 
     Calculator::StateMachineFactory smf;
     context->startExecution(smf, this);

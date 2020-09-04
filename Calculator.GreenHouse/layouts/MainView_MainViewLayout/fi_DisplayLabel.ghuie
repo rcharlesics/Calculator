@@ -63,6 +63,8 @@
             "value": 1
         },
         {
+            "bindingProp": "displayNums",
+            "bindingSrc": "Display",
             "name": "fi_EntryText_text",
             "type": 10,
             "value": "0."

@@ -83,6 +83,12 @@
             "value": 1
         }
     ],
+    "signals": [
+        {
+            "name": "clicked",
+            "rawCode": "root.itemInterface.set_Display_displayNums(Display.displayNums=3)\n"
+        }
+    ],
     "type": "CalculatorSet.NumberButton_Default_State",
     "userDefined": false
 }

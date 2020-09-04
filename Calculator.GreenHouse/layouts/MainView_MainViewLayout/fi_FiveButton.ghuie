@@ -5,12 +5,12 @@
         {
             "name": "x",
             "type": 4,
-            "value": 195
+            "value": 195.39999999999998
         },
         {
             "name": "y",
             "type": 4,
-            "value": 176
+            "value": 176.2
         },
         {
             "name": "z",
@@ -81,6 +81,12 @@
             "name": "scale",
             "type": 6,
             "value": 1
+        }
+    ],
+    "signals": [
+        {
+            "name": "clicked",
+            "rawCode": "root.itemInterface.set_Display_displayNums(Display.displayNums=5)\n"
         }
     ],
     "type": "CalculatorSet.NumberButton_Default_State",

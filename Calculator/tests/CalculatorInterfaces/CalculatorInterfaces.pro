@@ -13,11 +13,15 @@ CONFIG += c++11
 HEADERS += \
 tst_surfacecontroller.hpp \
 tst_surfacecontroller_impl.hpp \
+tst_display.hpp \
+tst_display_impl.hpp \
 tst_statemachine.hpp
 
 SOURCES += \
 tst_surfacecontroller.cpp \
 tst_surfacecontroller_impl.cpp \
+tst_display.cpp \
+tst_display_impl.cpp \
 tst_statemachine.cpp
 
 SOURCES += \

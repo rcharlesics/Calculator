@@ -1,4 +1,16 @@
 {
     "base": "Displayable",
-    "name": "MainView_MainViewIFace"
+    "name": "MainView_MainViewIFace",
+    "signals": [
+        {
+            "arguments": [
+                {
+                    "name": "displayNums",
+                    "preview": null,
+                    "type": 6
+                }
+            ],
+            "name": "set_Display_displayNums"
+        }
+    ]
 }

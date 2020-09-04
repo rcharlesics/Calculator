@@ -1,21 +1,21 @@
 {
     "childrenSplit": true,
-    "id": "fi_TwoButton",
+    "id": "numberbutton_default_state2",
     "properties": [
         {
             "name": "x",
             "type": 4,
-            "value": 195
+            "value": 0
         },
         {
             "name": "y",
             "type": 4,
-            "value": 216
+            "value": 0
         },
         {
             "name": "z",
             "type": 4,
-            "value": 14
+            "value": 4
         },
         {
             "name": "width",
@@ -65,7 +65,7 @@
         {
             "name": "fi_Number_Label_text",
             "type": 10,
-            "value": "2"
+            "value": "0"
         },
         {
             "name": "fi_Number_Label_verticalAlignment",
@@ -83,12 +83,7 @@
             "value": 1
         }
     ],
-    "signals": [
-        {
-            "name": "clicked",
-            "rawCode": "root.itemInterface.set_Display_displayNums(Display.displayNums=2)\n"
-        }
-    ],
     "type": "CalculatorSet.NumberButton_Default_State",
-    "userDefined": false
+    "userDefined": true,
+    "uuid": "{58be54f4-e1bc-49a1-8844-c6082e18a853}"
 }
