@@ -1,6 +1,11 @@
 {
     "backendObject": false,
     "hidden": false,
+    "methods": [
+        {
+            "name": "digitoneclicked"
+        }
+    ],
     "name": "Display",
     "properties": {
         "arguments": [

@@ -11,6 +11,9 @@
                 }
             ],
             "name": "set_Display_displayNums"
+        },
+        {
+            "name": "call_Display_digitoneclicked"
         }
     ]
 }

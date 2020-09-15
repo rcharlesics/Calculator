@@ -18,69 +18,9 @@
             "value": 16
         },
         {
-            "name": "width",
-            "type": 4,
-            "value": 47
-        },
-        {
-            "name": "height",
-            "type": 4,
-            "value": 34
-        },
-        {
-            "name": "opacity",
-            "type": 6,
-            "value": 1
-        },
-        {
-            "name": "enabled",
-            "type": 7,
-            "value": true
-        },
-        {
-            "name": "visible",
-            "type": 7,
-            "value": true
-        },
-        {
-            "name": "clip",
-            "type": 7,
-            "value": false
-        },
-        {
-            "name": "fi_Number_Label_horizontalAlignment",
-            "type": 133,
-            "value": 4
-        },
-        {
-            "name": "fi_Number_Label_labelColor",
-            "type": 131,
-            "value": "Figma::255_0_0_0"
-        },
-        {
-            "name": "fi_Number_Label_opacity",
-            "type": 6,
-            "value": 1
-        },
-        {
             "name": "fi_Number_Label_text",
             "type": 10,
             "value": "-"
-        },
-        {
-            "name": "fi_Number_Label_verticalAlignment",
-            "type": 134,
-            "value": 128
-        },
-        {
-            "name": "rotation",
-            "type": 6,
-            "value": 0
-        },
-        {
-            "name": "scale",
-            "type": 6,
-            "value": 1
         }
     ],
     "type": "CalculatorSet.NumberButton_Default_State",

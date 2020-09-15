@@ -783,3 +783,274 @@ TEST_F(StateMachine, ItemSignalTransitionTrigger)
     });
     qApp->exec();
 }
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerEqualReal)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterReal"),
+            GreenHouse::ItemPropertyChangedTransition::Equal, 1.0f, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerNotEqualReal)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterReal"),
+            GreenHouse::ItemPropertyChangedTransition::NotEqual, 0.0f, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerGreaterThanReal)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterReal"),
+            GreenHouse::ItemPropertyChangedTransition::GreaterThan, 0.0f, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerLessThanReal)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterReal"),
+            GreenHouse::ItemPropertyChangedTransition::LessThan, 2.0f, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerGreaterThanOrEqualReal)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterReal"),
+            GreenHouse::ItemPropertyChangedTransition::GreaterThanOrEqual, 1.0f, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerLessThanOrEqualReal)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterReal"),
+            GreenHouse::ItemPropertyChangedTransition::LessThanOrEqual, 1.0f, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerEqualDouble)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterDouble"),
+            GreenHouse::ItemPropertyChangedTransition::Equal, 1.0, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerNotEqualDouble)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterDouble"),
+            GreenHouse::ItemPropertyChangedTransition::NotEqual, 0.0, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerGreaterThanDouble)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterDouble"),
+            GreenHouse::ItemPropertyChangedTransition::GreaterThan, 0.0, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerLessThanDouble)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterDouble"),
+            GreenHouse::ItemPropertyChangedTransition::LessThan, 2.0, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerGreaterThanOrEqualDouble)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterDouble"),
+            GreenHouse::ItemPropertyChangedTransition::GreaterThanOrEqual, 1.0, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerLessThanOrEqualDouble)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterDouble"),
+            GreenHouse::ItemPropertyChangedTransition::LessThanOrEqual, 1.0, home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerEqualString)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterString"),
+            GreenHouse::ItemPropertyChangedTransition::Equal, QStringLiteral("01"), home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerNotEqualString)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterString"),
+            GreenHouse::ItemPropertyChangedTransition::NotEqual, QStringLiteral("0"), home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerGreaterThanString)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterString"),
+            GreenHouse::ItemPropertyChangedTransition::GreaterThan, QStringLiteral("0"), home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerLessThanString)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterString"),
+            GreenHouse::ItemPropertyChangedTransition::LessThan, QStringLiteral("011"), home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerGreaterThanOrEqualString)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterString"),
+            GreenHouse::ItemPropertyChangedTransition::GreaterThanOrEqual, QStringLiteral("01"),
+            home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}
+
+TEST_F(StateMachine, ItemPropertyChangedTransitionTriggerLessThanOrEqualString)
+{
+    auto home = qobject_cast<GreenHouse::ItemState *>(
+            context->stateForName(QStringLiteral("HomeState")));
+    ASSERT_NE(home, nullptr);
+    auto tr = new GreenHouse::ItemPropertyChangedTransition(
+            QStringLiteral("activationCounterString"),
+            GreenHouse::ItemPropertyChangedTransition::LessThanOrEqual, QStringLiteral("01"), home);
+    tr->addTriggeredFunction([this](GreenHouse::Context *ctx, const QVariantList &) -> void {
+        qApp->exit(0);
+        ASSERT_EQ(context, ctx);
+    });
+    qApp->exec();
+}

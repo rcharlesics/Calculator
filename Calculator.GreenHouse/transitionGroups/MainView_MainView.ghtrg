@@ -18,6 +18,24 @@
                     "type": 0
                 }
             ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_digitoneclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->digitoneclicked();\n}\n",
+                    "type": 0
+                }
+            ]
         }
     ]
 }

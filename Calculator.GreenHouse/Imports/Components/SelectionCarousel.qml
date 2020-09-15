@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 //PREVIEW IMAGE qrc:/DefaultComponentSet/PreviewAssets/carousel.png
 //PARENTING FALSE
-PathView {
+Item {
     id: root
 
     //MODEL

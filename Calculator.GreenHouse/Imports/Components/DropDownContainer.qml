@@ -53,4 +53,30 @@ Item {
             return Math.min(Math.max(h, root.delegateHeight + root.dropDownItem.anchors.topMargin), maxAllowedHeight);
         }
     }
+
+    // NOTE: The drop down needs to ensure that its renderd on top of all siblings
+    // the code below goes up the drop down's parent tree and sets the z value of
+    // parenting items to 999 when visible, all the way up to the main layout.
+    property var __oldZValues: []
+    onVisibleChanged: {
+        if (visible) {
+            __oldZValues = []
+            var parent = root.parent
+            while (parent) {
+                __oldZValues.push(parent.z)
+                parent.z = 999
+                parent = parent.parent
+                if (parent && parent.itemInterface)
+                    parent = null
+            }
+        } else {
+            var item = root.parent
+            for (var i = 0; i < __oldZValues.length; ++i) {
+                if (item) {
+                    item.z = __oldZValues[i]
+                    item = item.parent
+                }
+            }
+        }
+    }
 }

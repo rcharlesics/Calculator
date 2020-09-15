@@ -20,6 +20,10 @@ Item {
     property int barWidth: 20
     property int startOffset: 0
     property int span: 360
+    property bool indeterminate: false
+    property int indeterminateSpinDuration: 1000
+    property int indeterminateFillDuration: 1500
+    property int indeterminateClearDuration: 1250
 
     onMinChanged: progressCanvas.requestPaint()
     onMaxChanged: progressCanvas.requestPaint()
@@ -120,5 +124,39 @@ Item {
     FontMetrics {
         id: fm
         font: label.font
+    }
+
+    ParallelAnimation {
+        id: indeterminateAnimation
+
+        running: root.indeterminate
+
+        NumberAnimation {
+            loops: Animation.Infinite
+            target: root
+            from: 0
+            to: 360
+            duration: root.indeterminateSpinDuration
+            property: "startOffset"
+        }
+
+        SequentialAnimation {
+            loops: Animation.Infinite
+            NumberAnimation {
+                target: root
+                from: root.min
+                to: root.max
+                duration: root.indeterminateFillDuration
+                properties: "value"
+            }
+
+            NumberAnimation {
+                target: root
+                from: root.max
+                to: root.min
+                duration: root.indeterminateClearDuration
+                properties: "value"
+            }
+        }
     }
 }

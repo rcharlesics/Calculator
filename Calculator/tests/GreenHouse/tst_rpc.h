@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstdlib>
+
 #include <gtest/gtest.h>
 #include <gmock/gmock-matchers.h>
 
@@ -40,13 +42,13 @@ void RPCTest::SetUp()
     serverCtx.store(localIface);
     server = new GreenHouse::WebSocketRPCServer(&serverCtx, {}, QWebSocketServer::NonSecureMode);
     server->setServerName(QStringLiteral("Test RPC Server"));
-    server->listen(QHostAddress::Any, quint16(26186));
+    server->listen(QHostAddress::Any, 26186 + (std::rand() % 1000));
 
     clientIface = new TestPresenter;
     clientCtx.store(clientIface);
     clientSocket = new GreenHouse::WebSocketRPC(&clientCtx);
     clientSocket->setServiceName(QStringLiteral("Test RPC Socket"));
-    clientSocket->connectTo(QUrl(QStringLiteral("ws://localhost:26186")));
+    clientSocket->connectTo(QUrl(QStringLiteral("ws://localhost:%1").arg(server->serverPort())));
 }
 
 void RPCTest::TearDown()

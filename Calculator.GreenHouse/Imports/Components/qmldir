@@ -1,4 +1,5 @@
 module Components
+AutoRepeatMouseArea 1.0 AutoRepeatMouseArea.qml
 Button 1.0 Button.qml
 Label 1.0 Label.qml
 ImageAsset 1.0 ImageAsset.qml
@@ -32,3 +33,4 @@ DropDownContainer 1.0 DropDownContainer.qml
 SliderItem 1.0 SliderItem.qml
 RangedSlider 1.0 RangedSlider.qml
 RegularTextEdit 1.0 RegularTextEdit.qml
+ValueTumbler 1.0 ValueTumbler.qml

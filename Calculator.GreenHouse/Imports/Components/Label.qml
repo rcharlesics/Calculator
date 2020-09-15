@@ -56,7 +56,7 @@ Item {
         font: GreenHouseThemeManager.theme.font("textFont")
 
         horizontalAlignment: Text.AlignLeft
-        verticalAlignment: Text.AlignVCenter
+        verticalAlignment: Text.AlignTop
         textFormat: root.richText ? Text.RichText : Text.AutoText
     }
 }
