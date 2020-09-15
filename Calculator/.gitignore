@@ -7,11 +7,10 @@ build*
 *.jsc
 .stash
 target.cfg
-src/Simulator/*
-!src/Simulator/main.cpp
-!src/Simulator/CMakeLists.txt
-!src/Simulator/Simulator.pro
 src/App/Calculator/*
+src/Simulator/qml/*
+src/Simulator/simulator.*
+src/Simulator/*qrc
 lib/AppCore/Calculator*
 lib/AppCore/Imports/*
 lib/AppCore/imports.qrc
