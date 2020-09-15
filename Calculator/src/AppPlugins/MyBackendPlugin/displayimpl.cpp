@@ -1,4 +1,5 @@
 #include "displayimpl.h"
+#include "backend_log.h"
 
 DisplayImpl::DisplayImpl()
     : Calculator::Display()
@@ -6,6 +7,6 @@ DisplayImpl::DisplayImpl()
 
 void DisplayImpl::digitoneclicked()
 {
-    qDebug() << "One clicked";
+    logInfo() << "One clicked";
 }
 
