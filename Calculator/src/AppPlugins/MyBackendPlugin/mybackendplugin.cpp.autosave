@@ -24,4 +24,5 @@ void MyBackendPlugin::resolveDependencies(GreenHouse::Context *context)
     // NOTE: This is where you can query the context for dependencies
     // SampleObject *sample = context->get<SampleObject>();
     DisplayImpl *myDisp = context->get<DisplayImpl>();
+   
 }

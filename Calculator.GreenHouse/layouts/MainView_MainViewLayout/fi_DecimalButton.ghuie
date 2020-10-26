@@ -23,6 +23,12 @@
             "value": "."
         }
     ],
+    "signals": [
+        {
+            "name": "clicked",
+            "rawCode": "root.itemInterface.set_Display_displayNums(Display.displayNums+\".\")\n"
+        }
+    ],
     "type": "CalculatorSet.NumberButton_Default_State",
     "userDefined": false
 }

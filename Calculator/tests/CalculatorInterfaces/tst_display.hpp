@@ -114,10 +114,560 @@ TEST_F(DisplayInterfaceTest, digitoneclickedDisabledRPCMethodNotify)
 }
 
 
+TEST_F(DisplayInterfaceTest, digittwoclicked)
+{
+    
+    iface->digittwoclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, digittwoclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digittwoclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digittwoclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digittwoclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, digittwoclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digittwoclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digittwoclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digittwoclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitthreeclicked)
+{
+    
+    iface->digitthreeclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, digitthreeclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitthreeclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitthreeclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitthreeclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitthreeclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitthreeclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitthreeclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitthreeclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitfourclicked)
+{
+    
+    iface->digitfourclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, digitfourclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitfourclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitfourclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitfourclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitfourclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitfourclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitfourclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitfourclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitfiveclicked)
+{
+    
+    iface->digitfiveclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, digitfiveclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitfiveclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitfiveclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitfiveclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitfiveclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitfiveclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitfiveclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitfiveclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitsixclicked)
+{
+    
+    iface->digitsixclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, digitsixclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitsixclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitsixclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitsixclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitsixclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitsixclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitsixclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitsixclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitsevenclicked)
+{
+    
+    iface->digitsevenclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, digitsevenclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitsevenclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitsevenclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitsevenclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitsevenclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitsevenclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitsevenclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitsevenclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
+TEST_F(DisplayInterfaceTest, digiteightclicked)
+{
+    
+    iface->digiteightclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, digiteightclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digiteightclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digiteightclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digiteightclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, digiteightclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digiteightclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digiteightclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digiteightclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitnineclicked)
+{
+    
+    iface->digitnineclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, digitnineclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitnineclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitnineclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitnineclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitnineclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitnineclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitnineclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitnineclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
+TEST_F(DisplayInterfaceTest, dotclicked)
+{
+    
+    iface->dotclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, dotclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("dotclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, dotclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->dotclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, dotclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("dotclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, dotclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->dotclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitzeroclicked)
+{
+    
+    iface->digitzeroclicked();
+    
+}
+
+
+TEST_F(DisplayInterfaceTest, digitzeroclickedRPCMethod)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitzeroclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitzeroclickedRPCMethodNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitzeroclicked();
+    
+    // NOTE: We allow more than one message being generated because methods can emit signals
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(DisplayInterfaceTest, digitzeroclickedDisabledRPCMethod)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::MethodInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("digitzeroclicked") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+}
+
+TEST_F(DisplayInterfaceTest, digitzeroclickedDisabledRPCMethodNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->digitzeroclicked();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
 TEST_F(DisplayInterfaceTest, displayNums)
 {
     auto oldValue = iface->displayNums();
-    auto newValue = std::numeric_limits<float>::max();
+    auto newValue = QStringLiteral("Lorem Ipsum Test STR");
     
     bool changeSignalEmitted = false;
     QObject::connect(iface, &Calculator::Display::displayNumsChanged, [&]() { changeSignalEmitted = true; });
@@ -132,7 +682,7 @@ TEST_F(DisplayInterfaceTest, displayNums)
 TEST_F(DisplayInterfaceTest, displayNumsRPCSet)
 {
     auto oldValue = iface->displayNums();
-    auto newValue = std::numeric_limits<float>::max();
+    auto newValue = QStringLiteral("Lorem Ipsum Test STR");
     
     bool changeSignalEmitted = false;
     QObject::connect(iface, &Calculator::Display::displayNumsChanged, [&]() { changeSignalEmitted = true; });
@@ -141,7 +691,7 @@ TEST_F(DisplayInterfaceTest, displayNumsRPCSet)
     ASSERT_TRUE(iface->rpcEnabled());
     iface->handleMessage(GreenHouse::PropertyValueSet, QJsonObject({
         { QStringLiteral("NAME"), QStringLiteral("displayNums") },
-        { QStringLiteral("VALUE"), std::numeric_limits<float>::max() }
+        { QStringLiteral("VALUE"), QStringLiteral("Lorem Ipsum Test STR") }
     }));
     ASSERT_TRUE(changeSignalEmitted);
     ASSERT_NE(iface->displayNums(), oldValue);
@@ -151,7 +701,7 @@ TEST_F(DisplayInterfaceTest, displayNumsRPCSet)
 TEST_F(DisplayInterfaceTest, displayNumsRPCNotify)
 {
     auto oldValue = iface->displayNums();
-    auto newValue = std::numeric_limits<float>::max();
+    auto newValue = QStringLiteral("Lorem Ipsum Test STR");
     
     iface->enableRPC();
     ASSERT_TRUE(iface->rpcEnabled());
@@ -172,7 +722,7 @@ TEST_F(DisplayInterfaceTest, displayNumsRPCNotify)
 TEST_F(DisplayInterfaceTest, displayNumsRPCDisabledSet)
 {
     auto oldValue = iface->displayNums();
-    auto newValue = std::numeric_limits<float>::max();
+    auto newValue = QStringLiteral("Lorem Ipsum Test STR");
     
     bool changeSignalEmitted = false;
     QObject::connect(iface, &Calculator::Display::displayNumsChanged, [&]() { changeSignalEmitted = true; });
@@ -181,7 +731,7 @@ TEST_F(DisplayInterfaceTest, displayNumsRPCDisabledSet)
     ASSERT_TRUE(!iface->rpcEnabled());
     iface->handleMessage(GreenHouse::PropertyValueSet, QJsonObject({
         { QStringLiteral("NAME"), QStringLiteral("displayNums") },
-        { QStringLiteral("VALUE"), std::numeric_limits<float>::max() }
+        { QStringLiteral("VALUE"), QStringLiteral("Lorem Ipsum Test STR") }
     }));
     ASSERT_TRUE(!changeSignalEmitted);
     ASSERT_EQ(iface->displayNums(), oldValue);
@@ -191,7 +741,7 @@ TEST_F(DisplayInterfaceTest, displayNumsRPCDisabledSet)
 TEST_F(DisplayInterfaceTest, displayNumsRPCDisabledNotify)
 {
     auto oldValue = iface->displayNums();
-    auto newValue = std::numeric_limits<float>::max();
+    auto newValue = QStringLiteral("Lorem Ipsum Test STR");
     
     iface->disableRPC();
     ASSERT_TRUE(!iface->rpcEnabled());

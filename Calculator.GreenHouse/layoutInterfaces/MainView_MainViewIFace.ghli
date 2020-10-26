@@ -7,7 +7,7 @@
                 {
                     "name": "displayNums",
                     "preview": null,
-                    "type": 6
+                    "type": 3
                 }
             ],
             "name": "set_Display_displayNums"

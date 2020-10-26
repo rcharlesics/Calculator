@@ -4,6 +4,36 @@
     "methods": [
         {
             "name": "digitoneclicked"
+        },
+        {
+            "name": "digittwoclicked"
+        },
+        {
+            "name": "digitthreeclicked"
+        },
+        {
+            "name": "digitfourclicked"
+        },
+        {
+            "name": "digitfiveclicked"
+        },
+        {
+            "name": "digitsixclicked"
+        },
+        {
+            "name": "digitsevenclicked"
+        },
+        {
+            "name": "digiteightclicked"
+        },
+        {
+            "name": "digitnineclicked"
+        },
+        {
+            "name": "dotclicked"
+        },
+        {
+            "name": "digitzeroclicked"
         }
     ],
     "name": "Display",
@@ -11,8 +41,8 @@
         "arguments": [
             {
                 "name": "displayNums",
-                "preview": null,
-                "type": 6
+                "preview": "0",
+                "type": 3
             }
         ]
     },

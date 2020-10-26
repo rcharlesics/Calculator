@@ -26,7 +26,7 @@
     "signals": [
         {
             "name": "clicked",
-            "rawCode": "root.itemInterface.set_Display_displayNums(7)\n"
+            "rawCode": "root.itemInterface.set_Display_displayNums(Display.displayNums+\"7\")\n"
         }
     ],
     "type": "CalculatorSet.NumberButton_Default_State",

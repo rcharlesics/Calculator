@@ -14,7 +14,7 @@
             "template": "ItemSignalTransition",
             "triggeredActions": [
                 {
-                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->setDisplayNums(args.at(0).toFloat());\n}\n",
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->setDisplayNums(args.at(0).toString());\n}\n",
                     "type": 0
                 }
             ]
