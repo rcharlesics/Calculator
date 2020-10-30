@@ -6,7 +6,7 @@
                 "backTransition": false,
                 "blockedIfTargetActive": false,
                 "internal": false,
-                "signalName": "set_Display_displayNums",
+                "signalName": "call_Display_dotclicked",
                 "validSourceTemplates": [
                     "ItemState"
                 ]
@@ -14,7 +14,7 @@
             "template": "ItemSignalTransition",
             "triggeredActions": [
                 {
-                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->setDisplayNums(args.at(0).toString());\n}\n",
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->dotclicked();\n}\n",
                     "type": 0
                 }
             ]
@@ -24,7 +24,7 @@
                 "backTransition": false,
                 "blockedIfTargetActive": false,
                 "internal": false,
-                "signalName": "call_Display_digitoneclicked",
+                "signalName": "call_Display_digitclicked",
                 "validSourceTemplates": [
                     "ItemState"
                 ]
@@ -32,7 +32,241 @@
             "template": "ItemSignalTransition",
             "triggeredActions": [
                 {
-                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->digitoneclicked();\n}\n",
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->digitclicked(args.at(0).toString());\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_divclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->divclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_multclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->multclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_subclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->subclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_addclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->addclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_percclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->percclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_sqrtclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->sqrtclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_clearclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->clearclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_ceclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->ceclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_backclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->backclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_eqclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->eqclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_mcclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->mcclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_mrclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->mrclicked();\n}\n",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "properties": {
+                "backTransition": false,
+                "blockedIfTargetActive": false,
+                "internal": false,
+                "signalName": "call_Display_msclicked",
+                "validSourceTemplates": [
+                    "ItemState"
+                ]
+            },
+            "template": "ItemSignalTransition",
+            "triggeredActions": [
+                {
+                    "rawCode": "{\nCONTEXT_OBJECT(Display, co) co->msclicked();\n}\n",
                     "type": 0
                 }
             ]

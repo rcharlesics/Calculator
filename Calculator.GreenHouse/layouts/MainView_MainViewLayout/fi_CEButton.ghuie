@@ -23,6 +23,12 @@
             "value": "CE"
         }
     ],
+    "signals": [
+        {
+            "name": "clicked",
+            "rawCode": "root.itemInterface.call_Display_ceclicked()\n"
+        }
+    ],
     "type": "CalculatorSet.LargerButton_Default_State",
     "userDefined": false
 }

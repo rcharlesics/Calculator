@@ -37,14 +37,6 @@ public:
     ///
     void inject(GreenHouse::Context *context);
 
-    ///
-    /// \brief inject used to inject a subset of presenters/controllers from the loaded plugins into
-    /// the provided context
-    /// \param context the context instance for the plugin to inject to
-    /// \param interfaceIdList a list containing type ids of the required presenters/controllers
-    ///
-    void inject(GreenHouse::Context *context, const QList<int> &interfaceIdList);
-
 private:
     QList<QPluginLoader *> m_plugins;
 };

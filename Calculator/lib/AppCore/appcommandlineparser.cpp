@@ -24,18 +24,23 @@ QString parseDebugOptions(const QString &debug)
 }
 }
 
+QString AppCommandLineParser::s_loggingFilters = QStringLiteral("*.debug=false\n"
+                                                                "qml.debug=true\n"
+                                                                "theming.debug=true\n"
+                                                                "statemachine.debug=true\n"
+                                                                "appcore.debug=true\n");
+
+QString AppCommandLineParser::s_pluginPath = QString();
+
+bool AppCommandLineParser::s_remoteBackend = false;
+quint16 AppCommandLineParser::s_backendPort = 26185;
+QString AppCommandLineParser::s_backendUrl = QStringLiteral("localhost");
+
+bool AppCommandLineParser::s_simulator = false;
+quint16 AppCommandLineParser::s_simulatorPort = 26186;
+QString AppCommandLineParser::s_simulatorUrl = QStringLiteral("localhost");
+
 AppCommandLineParser::AppCommandLineParser(const QStringList &args)
-  : m_loggingFilters(QStringLiteral("*.debug=false\n"
-                                    "qml.debug=true\n"
-                                    "theming.debug=true\n"
-                                    "greenhouse.debug=true\n"
-                                    "appcore.debug=true"))
-  , m_remoteBackend(false)
-  , m_backendPort(26185)
-  , m_backendUrl(QStringLiteral("localhost"))
-  , m_simulator(false)
-  , m_simulatorPort(26186)
-  , m_simulatorUrl(QStringLiteral("localhost"))
 {
     static AppCoreQRCInit init;
 
@@ -110,7 +115,7 @@ AppCommandLineParser::AppCommandLineParser(const QStringList &args)
                     "main",
                     "Used to sepcify the URL used to connect to a backend instance.\n"
                     "   e.g. 'localhost'. \n"),
-            QStringLiteral("url"), m_backendUrl);
+            QStringLiteral("url"), s_backendUrl);
     parser.addOption(backendUrl);
 
     QCommandLineOption simulator(
@@ -134,7 +139,7 @@ AppCommandLineParser::AppCommandLineParser(const QStringList &args)
                     "main",
                     "Used to sepcify the URL used to connect to a simulator instance.\n"
                     "   e.g. 'localhost'. \n"),
-            QStringLiteral("url"), m_simulatorUrl);
+            QStringLiteral("url"), s_simulatorUrl);
     parser.addOption(simulatorUrl);
 
     parser.process(args);
@@ -146,65 +151,65 @@ AppCommandLineParser::AppCommandLineParser(const QStringList &args)
         parser.showHelp();
 
     if (parser.isSet(debugOption))
-        m_loggingFilters = parseDebugOptions(parser.value(debugOption));
+        s_loggingFilters = parseDebugOptions(parser.value(debugOption));
 
     if (parser.isSet(pluginDir))
-        m_pluginPath = parser.value(pluginDir);
+        s_pluginPath = parser.value(pluginDir);
 
     if (parser.isSet(remoteBackend))
-        m_remoteBackend = parser.isSet(remoteBackend);
+        s_remoteBackend = parser.isSet(remoteBackend);
 
     if (parser.isSet(backendPort))
-        m_backendPort = parser.value(backendPort).toUInt();
+        s_backendPort = parser.value(backendPort).toUInt();
 
     if (parser.isSet(backendUrl))
-        m_backendUrl = parser.value(backendUrl);
+        s_backendUrl = parser.value(backendUrl);
 
-    m_simulator = parser.isSet(simulator);
+    s_simulator = parser.isSet(simulator);
 
     if (parser.isSet(simulatorPort))
-        m_simulatorPort = parser.value(simulatorPort).toUInt();
+        s_simulatorPort = parser.value(simulatorPort).toUInt();
 
     if (parser.isSet(simulatorUrl))
-        m_simulatorUrl = parser.value(simulatorUrl);
+        s_simulatorUrl = parser.value(simulatorUrl);
 }
 
-QString AppCommandLineParser::loggingFilters() const
+QString AppCommandLineParser::loggingFilters()
 {
-    return m_loggingFilters;
+    return s_loggingFilters;
 }
 
-QString AppCommandLineParser::pluginPath() const
+QString AppCommandLineParser::pluginPath()
 {
-    return m_pluginPath;
+    return s_pluginPath;
 }
 
-bool AppCommandLineParser::remoteBackend() const
+bool AppCommandLineParser::remoteBackend()
 {
-    return m_remoteBackend;
+    return s_remoteBackend;
 }
 
-quint16 AppCommandLineParser::backendPort() const
+quint16 AppCommandLineParser::backendPort()
 {
-    return m_backendPort;
+    return s_backendPort;
 }
 
-QString AppCommandLineParser::backendUrl() const
+QString AppCommandLineParser::backendUrl()
 {
-    return m_backendUrl;
+    return s_backendUrl;
 }
 
-bool AppCommandLineParser::simulator() const
+bool AppCommandLineParser::simulator()
 {
-    return m_simulator;
+    return s_simulator;
 }
 
-quint16 AppCommandLineParser::simulatorPort() const
+quint16 AppCommandLineParser::simulatorPort()
 {
-    return m_simulatorPort;
+    return s_simulatorPort;
 }
 
-QString AppCommandLineParser::simulatorUrl() const
+QString AppCommandLineParser::simulatorUrl()
 {
-    return m_simulatorUrl;
+    return s_simulatorUrl;
 }

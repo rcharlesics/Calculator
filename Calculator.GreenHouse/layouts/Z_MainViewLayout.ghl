@@ -1,0 +1,19 @@
+{
+    "blockInputFallthrough": true,
+    "childrenSplit": true,
+    "fillParent": false,
+    "height": 190,
+    "hideAnimation": {
+        "type": 0
+    },
+    "interfaceName": "Z_MainViewIFace",
+    "name": "Z_MainViewLayout",
+    "posX": 83,
+    "posY": 70,
+    "rootContainerType": 0,
+    "showAnimation": {
+        "type": 0
+    },
+    "uuid": "{8eea0b5b-5d8b-4dca-811c-df97a0fa7b27}",
+    "width": 287
+}

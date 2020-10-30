@@ -6,7 +6,6 @@
 #include <QQuickItem>
 #include <QQmlEngine>
 
-class AppCommandLineParser;
 class ApplicationPluginManager;
 
 namespace GreenHouse {
@@ -23,8 +22,8 @@ class Integration : public QObject
     Q_OBJECT
     Q_DISABLE_COPY(Integration)
 public:
-    explicit Integration(QQmlEngine *engine, AppCommandLineParser *cmd, QObject *parent = nullptr);
-    explicit Integration(AppCommandLineParser *cmd, QObject *parent = nullptr);
+    explicit Integration(QQmlEngine *engine, QObject *parent = nullptr);
+    explicit Integration(QObject *parent = nullptr);
     ~Integration();
 
     Q_INVOKABLE void mainWindowCreated(QQuickItem *mainContainer, QQuickWindow *window);
@@ -35,7 +34,6 @@ private:
     void connectToBackend();
     void connectToSimulator(QQuickWindow *window);
 
-    AppCommandLineParser *m_cmd = nullptr;
     QQmlEngine *m_engine = nullptr;
     ApplicationPluginManager *m_applicationPluginManager = nullptr;
     GreenHouse::Context *m_context = nullptr;

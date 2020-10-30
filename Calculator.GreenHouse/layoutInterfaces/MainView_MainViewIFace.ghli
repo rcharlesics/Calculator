@@ -3,17 +3,56 @@
     "name": "MainView_MainViewIFace",
     "signals": [
         {
+            "name": "call_Display_dotclicked"
+        },
+        {
             "arguments": [
                 {
-                    "name": "displayNums",
+                    "name": "digit",
                     "preview": null,
                     "type": 3
                 }
             ],
-            "name": "set_Display_displayNums"
+            "name": "call_Display_digitclicked"
         },
         {
-            "name": "call_Display_digitoneclicked"
+            "name": "call_Display_divclicked"
+        },
+        {
+            "name": "call_Display_multclicked"
+        },
+        {
+            "name": "call_Display_subclicked"
+        },
+        {
+            "name": "call_Display_addclicked"
+        },
+        {
+            "name": "call_Display_percclicked"
+        },
+        {
+            "name": "call_Display_sqrtclicked"
+        },
+        {
+            "name": "call_Display_clearclicked"
+        },
+        {
+            "name": "call_Display_ceclicked"
+        },
+        {
+            "name": "call_Display_backclicked"
+        },
+        {
+            "name": "call_Display_eqclicked"
+        },
+        {
+            "name": "call_Display_mcclicked"
+        },
+        {
+            "name": "call_Display_mrclicked"
+        },
+        {
+            "name": "call_Display_msclicked"
         }
     ]
 }

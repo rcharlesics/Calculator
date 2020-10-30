@@ -80,8 +80,10 @@ TEST_F(StateMachineFactory, RemoteUXInterfaceAccess)
     Calculator::StateMachineFactory smf;
     context->startExecution(smf, this);
     auto interfaceManager = context->remoteUXInterfaceManager();
-    ASSERT_EQ(interfaceManager->uxInterfaceCount(), 1);
+    ASSERT_EQ(interfaceManager->uxInterfaceCount(), 2);
 ASSERT_NE(interfaceManager->uxInterface(QStringLiteral("MainView_MainViewIFace")), nullptr);
+
+ASSERT_NE(interfaceManager->uxInterface(QStringLiteral("Z_MainViewIFace")), nullptr);
 
 
 }
@@ -100,6 +102,7 @@ ASSERT_NE(context->stateForName(QStringLiteral("NoPopup")), nullptr);
 ASSERT_NE(context->stateForName(QStringLiteral("Popups")), nullptr);
 ASSERT_NE(context->stateForName(QStringLiteral("Root_State")), nullptr);
 ASSERT_NE(context->stateForName(QStringLiteral("Screens")), nullptr);
+ASSERT_NE(context->stateForName(QStringLiteral("Z_MainView")), nullptr);
 
 }
 
@@ -110,7 +113,7 @@ TEST_F(StateMachineFactory, InitialStatesActive)
     qApp->processEvents();
 ASSERT_THAT(context->stateForName(QStringLiteral("Root_State"))->active(), Eq(true));
 ASSERT_THAT(context->stateForName(QStringLiteral("MainView"))->active(), Eq(true));
-ASSERT_THAT(context->stateForName(QStringLiteral("MainViewHidden"))->active(), Eq(true));
+ASSERT_THAT(context->stateForName(QStringLiteral("MainView_MainView"))->active(), Eq(true));
 ASSERT_THAT(context->stateForName(QStringLiteral("Screens"))->active(), Eq(true));
 ASSERT_THAT(context->stateForName(QStringLiteral("MainView_ScreenState"))->active(), Eq(true));
 ASSERT_THAT(context->stateForName(QStringLiteral("Menus"))->active(), Eq(true));

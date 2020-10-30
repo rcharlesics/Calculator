@@ -23,6 +23,12 @@
             "value": "BACK"
         }
     ],
+    "signals": [
+        {
+            "name": "clicked",
+            "rawCode": "root.itemInterface.call_Display_backclicked()\n"
+        }
+    ],
     "type": "CalculatorSet.LargerButton_Default_State",
     "userDefined": false
 }

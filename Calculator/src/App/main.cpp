@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 #ifndef HEADLESS
     QQmlApplicationEngine engine;
-    Integration *integration = new Integration(&engine, &cmdParser, &engine);
+    Integration *integration = new Integration(&engine, &engine);
     engine.rootContext()->setContextProperty(QStringLiteral("Integration"), integration);
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 #else

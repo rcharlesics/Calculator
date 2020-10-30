@@ -26,7 +26,7 @@
     "signals": [
         {
             "name": "clicked",
-            "rawCode": "root.itemInterface.set_Display_displayNums(Display.displayNums+\"1\")\nroot.itemInterface.call_Display_digitoneclicked()\n"
+            "rawCode": "root.itemInterface.call_Display_digitclicked(\"1\")\n"
         }
     ],
     "type": "CalculatorSet.NumberButton_Default_State",

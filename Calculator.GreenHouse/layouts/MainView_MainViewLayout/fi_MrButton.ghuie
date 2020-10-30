@@ -23,6 +23,12 @@
             "value": "MR"
         }
     ],
+    "signals": [
+        {
+            "name": "clicked",
+            "rawCode": "root.itemInterface.call_Display_mrclicked()\n"
+        }
+    ],
     "type": "CalculatorSet.NumberButton_Default_State",
     "userDefined": false
 }

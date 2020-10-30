@@ -26,7 +26,7 @@
     "signals": [
         {
             "name": "clicked",
-            "rawCode": "root.itemInterface.set_Display_displayNums(\"0\")\n"
+            "rawCode": "root.itemInterface.call_Display_clearclicked()\n"
         }
     ],
     "type": "CalculatorSet.LargerButton_Default_State",

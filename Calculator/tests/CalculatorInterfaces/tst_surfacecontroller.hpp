@@ -491,6 +491,60 @@ TEST_F(SurfaceControllerInterfaceTest, surfaceMainViewMoveToMainView_MainViewDis
 }
 
 
+TEST_F(SurfaceControllerInterfaceTest, surfaceMainViewMoveToZ_MainViewRPCEvent)
+{
+    bool signalEmitted = false;
+    QObject::connect(iface, &Calculator::SurfaceController::surfaceMainViewMoveToZ_MainView, [&]() { signalEmitted = true; });
+    
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::EventInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("surfaceMainViewMoveToZ_MainView") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+    ASSERT_TRUE(signalEmitted);
+}
+
+TEST_F(SurfaceControllerInterfaceTest, surfaceMainViewMoveToZ_MainViewRPCEventNotify)
+{
+    iface->enableRPC();
+    ASSERT_TRUE(iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->surfaceMainViewMoveToZ_MainView();
+    
+    ASSERT_TRUE(m_rpc->messages.length() >= 1);
+}
+
+
+TEST_F(SurfaceControllerInterfaceTest, surfaceMainViewMoveToZ_MainViewDisabledRPCEvent)
+{
+    bool signalEmitted = false;
+    QObject::connect(iface, &Calculator::SurfaceController::surfaceMainViewMoveToZ_MainView, [&]() { signalEmitted = true; });
+    
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    
+    iface->handleMessage(GreenHouse::EventInvoked, QJsonObject({
+        { QStringLiteral("NAME"), QStringLiteral("surfaceMainViewMoveToZ_MainView") },
+        { QStringLiteral("ARGS_TAG"), QJsonObject({  }) }
+    }));
+    ASSERT_TRUE(!signalEmitted);
+}
+
+TEST_F(SurfaceControllerInterfaceTest, surfaceMainViewMoveToZ_MainViewDisabledRPCEventNotify)
+{
+    iface->disableRPC();
+    ASSERT_TRUE(!iface->rpcEnabled());
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+    
+    iface->surfaceMainViewMoveToZ_MainView();
+    
+    ASSERT_TRUE(m_rpc->messages.length() == 0);
+}
+
+
 TEST_F(SurfaceControllerInterfaceTest, SurfaceControllerRPCPublish)
 {
     iface->enableRPC();

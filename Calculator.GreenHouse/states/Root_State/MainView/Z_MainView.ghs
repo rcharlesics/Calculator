@@ -19,18 +19,17 @@
         }
     ],
     "extraData": {
-        "FIGMA": "W8dLtfOaonKKKRR69Qb9hC",
-        "orderValue": 1
+        "orderValue": 2
     },
     "height": 0,
     "posX": 0,
     "posY": 0,
     "properties": {
         "childViewType": "ChildStateView",
-        "initial": true,
-        "layoutFile": "MainView_MainViewLayout",
+        "initial": false,
+        "layoutFile": "Z_MainViewLayout",
         "layoutFileTemplate": "%1Impl.qml",
-        "name": "MainView_MainView",
+        "name": "Z_MainView",
         "parallel": false,
         "parentingEnabled": true,
         "preloadUI": false

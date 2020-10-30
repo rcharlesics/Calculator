@@ -145,33 +145,3 @@ void ApplicationPluginManager::inject(GreenHouse::Context *context)
         iface->resolveDependencies(context);
     }
 }
-
-void ApplicationPluginManager::inject(GreenHouse::Context *context,
-                                      const QList<int> &interfaceIdList)
-{
-    QList<ApplicationPluginInterface *> injected;
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    for (QPluginLoader *plugin : qAsConst(m_plugins)) {
-#else
-    for (auto it = m_plugins.constBegin(); it != m_plugins.constEnd(); ++it) {
-        QPluginLoader *plugin = *it;
-#endif
-        ApplicationPluginInterface *iface =
-                qobject_cast<ApplicationPluginInterface *>(plugin->instance());
-        if (iface) {
-            if (iface->populateContext(context, interfaceIdList) > 0)
-                injected.append(iface);
-        } else {
-            acWarning() << plugin->errorString();
-            Q_ASSERT(iface);
-        }
-    }
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    for (ApplicationPluginInterface *iface : qAsConst(injected)) {
-#else
-    for (auto it = injected.constBegin(); it != injected.constEnd(); ++it) {
-        ApplicationPluginInterface *iface = *it;
-#endif
-        iface->resolveDependencies(context);
-    }
-}

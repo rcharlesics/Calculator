@@ -27,18 +27,6 @@ public:
     virtual void populateContext(GreenHouse::Context *context) = 0;
 
     ///
-    /// \brief populateContext used to allow a plugin to inject presenter/controller instances into
-    /// the provided context based on a requested interface list
-    /// \param context the context instance for the plugin to inject to
-    /// \param interfaceIdList a list containing type ids of the required presenters/controllers
-    /// \return the number of injected instances
-    ///
-    /// NOTE: This method should only inject objects if their type id can be found on the
-    /// interfaceIdList
-    ///
-    virtual int populateContext(GreenHouse::Context *context, const QList<int> &interfaceIdList);
-
-    ///
     /// \brief resolveDependencies invoked after the injection step is done in order to allow the
     /// plugin to resolve injected object dependencies
     /// \param context

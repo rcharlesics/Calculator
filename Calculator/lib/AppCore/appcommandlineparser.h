@@ -21,13 +21,13 @@ public:
     /// \brief loggingFilters used to get a string containing the logging category filters
     /// \return
     ///
-    QString loggingFilters() const;
+    static QString loggingFilters();
 
     ///
     /// \brief pluginPath used to get a string containing the plugin loading path
     /// \return
     ///
-    QString pluginPath() const;
+    static QString pluginPath();
 
     ///
     /// \brief remoteBackend used to determine if the application should connect to a remote
@@ -35,7 +35,7 @@ public:
     ///
     /// \return
     ///
-    bool remoteBackend() const;
+    static bool remoteBackend();
 
     ///
     /// \brief backendPort used to get a string containing the port used to connect to a remote
@@ -43,7 +43,7 @@ public:
     ///
     /// \return
     ///
-    quint16 backendPort() const;
+    static quint16 backendPort();
 
     ///
     /// \brief backendUrl used to get a string containing the url used to connect to a remote
@@ -51,37 +51,37 @@ public:
     ///
     /// \return
     ///
-    QString backendUrl() const;
+    static QString backendUrl();
 
     ///
     /// \brief simulator used to determine if the application should connect to a simulator
     /// \return
     ///
-    bool simulator() const;
+    static bool simulator();
 
     ///
     /// \brief simulatorPort used to get a string containing the port used to connect to a simulator
     /// \return
     ///
-    quint16 simulatorPort() const;
+    static quint16 simulatorPort();
 
     ///
     /// \brief simulatorUrl used to get a string containing the url used to connect to a simulator
     /// instance \return
     ///
-    QString simulatorUrl() const;
+    static QString simulatorUrl();
 
 private:
-    QString m_loggingFilters;
-    QString m_pluginPath;
+    static QString s_loggingFilters;
+    static QString s_pluginPath;
 
-    bool m_remoteBackend;
-    quint16 m_backendPort;
-    QString m_backendUrl;
+    static bool s_remoteBackend;
+    static quint16 s_backendPort;
+    static QString s_backendUrl;
 
-    bool m_simulator;
-    quint16 m_simulatorPort;
-    QString m_simulatorUrl;
+    static bool s_simulator;
+    static quint16 s_simulatorPort;
+    static QString s_simulatorUrl;
 };
 
 #endif // APPCOMMANDLINEPARSER_H

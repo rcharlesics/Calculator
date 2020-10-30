@@ -3,37 +3,65 @@
     "hidden": false,
     "methods": [
         {
-            "name": "digitoneclicked"
-        },
-        {
-            "name": "digittwoclicked"
-        },
-        {
-            "name": "digitthreeclicked"
-        },
-        {
-            "name": "digitfourclicked"
-        },
-        {
-            "name": "digitfiveclicked"
-        },
-        {
-            "name": "digitsixclicked"
-        },
-        {
-            "name": "digitsevenclicked"
-        },
-        {
-            "name": "digiteightclicked"
-        },
-        {
-            "name": "digitnineclicked"
-        },
-        {
             "name": "dotclicked"
         },
         {
-            "name": "digitzeroclicked"
+            "name": "multclicked"
+        },
+        {
+            "name": "addclicked"
+        },
+        {
+            "name": "subclicked"
+        },
+        {
+            "name": "divclicked"
+        },
+        {
+            "arguments": [
+                {
+                    "name": "digit",
+                    "preview": null,
+                    "type": 3
+                }
+            ],
+            "name": "digitclicked"
+        },
+        {
+            "name": "negclicked"
+        },
+        {
+            "name": "sqrtclicked"
+        },
+        {
+            "name": "percclicked"
+        },
+        {
+            "name": "fracclicked"
+        },
+        {
+            "name": "eqclicked"
+        },
+        {
+            "name": "backclicked"
+        },
+        {
+            "name": "clearclicked"
+        },
+        {
+            "name": "ceclicked"
+        },
+        {
+            "name": "mrclicked"
+        },
+        {
+            "name": "mcclicked"
+        },
+        {
+            "name": "msclicked"
+        },
+        {
+            "name": "mplusclicked"
         }
     ],
     "name": "Display",

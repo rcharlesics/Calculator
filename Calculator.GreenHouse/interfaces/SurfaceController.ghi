@@ -26,6 +26,9 @@
         },
         {
             "name": "surfaceMainViewMoveToMainView_MainView"
+        },
+        {
+            "name": "surfaceMainViewMoveToZ_MainView"
         }
     ]
 }

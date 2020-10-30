@@ -15,18 +15,16 @@
 #include <Calculator/statemachinefactory.hpp>
 #include <Calculator/remoteiteminterfaces.hpp>
 
-Integration::Integration(QQmlEngine *engine, AppCommandLineParser *cmd, QObject *parent) :
+Integration::Integration(QQmlEngine *engine, QObject *parent) :
     QObject(parent)
-   , m_cmd(cmd)
    , m_engine(engine)
 {
    loadPluginConfig();
 }
 
 
-Integration::Integration(AppCommandLineParser *cmd, QObject *parent) :
+Integration::Integration(QObject *parent) :
     QObject(parent)
-   , m_cmd(cmd)
 {
    loadPluginConfig();
 }
@@ -89,16 +87,16 @@ void Integration::startExecution()
 
 void Integration::loadPluginConfig()
 {
-    if (m_cmd->remoteBackend())
+    if (AppCommandLineParser::remoteBackend())
         return;
     QDir pluginDir;
-    if (m_cmd->pluginPath().isEmpty()) {
+    if (AppCommandLineParser::pluginPath().isEmpty()) {
         pluginDir = QDir(qApp->applicationDirPath());
         if (!QFile::exists(pluginDir.absoluteFilePath(QStringLiteral("plugins"))))
             pluginDir.cdUp();
         pluginDir.cd(QStringLiteral("plugins"));
     } else {
-        pluginDir = QDir(m_cmd->pluginPath());
+        pluginDir = QDir(AppCommandLineParser::pluginPath());
     }
     if (pluginDir.exists()) {
         m_applicationPluginManager = new ApplicationPluginManager(
@@ -108,31 +106,31 @@ void Integration::loadPluginConfig()
 
 void Integration::connectToBackend()
 {
-    if (!m_cmd->remoteBackend())
+    if (!AppCommandLineParser::remoteBackend())
         return;
     auto backendSocket = new GreenHouse::WebSocketRPC(m_context);
     backendSocket->setServiceName(QStringLiteral("Remote Backend Socket"));
     backendSocket->connectTo(QUrl(QStringLiteral("ws://%1:%2")
-                                    .arg(m_cmd->backendUrl())
-                                    .arg(m_cmd->backendPort())));
+                                    .arg(AppCommandLineParser::backendUrl())
+                                    .arg(AppCommandLineParser::backendPort())));
 }
 
 void Integration::connectToSimulator(QQuickWindow *window)
 {
-    if (!m_cmd->simulator())
+    if (!AppCommandLineParser::simulator())
         return;
     QString variableDirection = QLatin1String(qgetenv("DIRECTION_APP_TO_SIMULATOR"));
     bool appToSimulator = !variableDirection.isEmpty();
     if (appToSimulator) {
         auto appServer = new GreenHouse::WebSocketRPCServer(m_context, {}, QWebSocketServer::NonSecureMode);
         appServer->setServiceName(QStringLiteral("Simulator Server"));
-        appServer->listen(QHostAddress::Any, m_cmd->simulatorPort());
+        appServer->listen(QHostAddress::Any, AppCommandLineParser::simulatorPort());
     } else {
         auto simulatorSocket = new GreenHouse::WebSocketRPC(m_context);
         simulatorSocket->setServiceName(QStringLiteral("Simulator Socket"));
         simulatorSocket->connectTo(QUrl(QStringLiteral("ws://%1:%2")
-                                        .arg(m_cmd->simulatorUrl())
-                                        .arg(m_cmd->simulatorPort())));
+                                        .arg(AppCommandLineParser::simulatorUrl())
+                                        .arg(AppCommandLineParser::simulatorPort())));
     }
     if (window)
         new GreenHouse::TestFixture(m_context, window);
