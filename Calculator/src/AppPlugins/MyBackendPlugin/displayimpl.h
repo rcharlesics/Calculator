@@ -7,7 +7,12 @@
 class DisplayImpl : public Calculator::Display
 {
     Q_OBJECT
-    bool secOperand;
+    double firstOperand;
+    bool isNeg;
+    bool isMult;
+    bool isAdd;
+    bool isSub;
+    bool isDiv;
 public:
     explicit DisplayImpl();
     void digitclicked(const QString &digit) override;
@@ -15,6 +20,13 @@ public:
     void clearclicked() override;
     void ceclicked() override;
     void backclicked() override;
+    void multclicked() override;
+    void addclicked() override;
+    void subclicked() override;
+    void divclicked() override;
+    void negclicked() override;
+    void eqclicked() override;
+    void sqrtclicked() override;
 };
 
 #endif // DisplayIMPL_H
