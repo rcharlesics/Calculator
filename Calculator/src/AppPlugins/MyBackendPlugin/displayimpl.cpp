@@ -5,11 +5,12 @@
 DisplayImpl::DisplayImpl()
     : Calculator::Display()
 {
-    isNeg=false;
+
     isAdd=false;
     isDiv=false;
     isMult=false;
     isSub=false;
+    waitingSecond=false;
 }
 
 void DisplayImpl::digitclicked(const QString &digit)
@@ -41,6 +42,11 @@ void DisplayImpl::clearclicked()
 {
     logInfo() << "Cleared everything.";
     setDisplayNums(QStringLiteral("0"));
+    isAdd=false;
+    isDiv=false;
+    isMult=false;
+    isSub=false;
+    waitingSecond=false;
 }
 
 void DisplayImpl::ceclicked()
@@ -66,34 +72,126 @@ void DisplayImpl::backclicked()
 
 void DisplayImpl::multclicked()
 {
+    if (waitingSecond){
+        if (isMult)
+        {
+            double res = firstOperand * displayNums().toDouble();
+            setDisplayNums(QString::number(res));
+            firstOperand = res;
+            logInfo() << "hit mulitplied twice";
+            return;
+        }
+        if (isAdd)
+        {
+            isAdd=false;
+        }
+        if (isSub)
+        {
+            isSub=false;
+        }
+        if (isDiv)
+        {
+            isDiv=false;
+        }
+    }
     firstOperand = displayNums().toDouble();
     setDisplayNums(QStringLiteral("0"));
     isMult=true;
+    waitingSecond=true;
     logInfo() << "Ready to multiply";
 }
 
 void DisplayImpl::addclicked()
 {
+    if (waitingSecond){
+        if (isMult)
+        {
+            isMult=false;
+        }
+        if (isAdd)
+        {
+            double res = firstOperand +displayNums().toDouble();
+            setDisplayNums(QString::number(res));
+            firstOperand = res;
+            logInfo() << "hit added twice";
+            return;
+
+        }
+        if (isSub)
+        {
+            isSub=false;
+        }
+        if (isDiv)
+        {
+            isDiv=false;
+        }
+    }
     firstOperand = displayNums().toDouble();
     setDisplayNums(QStringLiteral("0"));
     isAdd=true;
+    waitingSecond=true;
     logInfo() << "Ready to add";
 }
 
 void DisplayImpl::subclicked()
 {
+    if (waitingSecond){
+        if (isMult)
+        {
+            isMult=false;
+        }
+        if (isAdd)
+        {
+            isAdd=false;
+        }
+        if (isSub)
+        {
+            double res = firstOperand -displayNums().toDouble();
+            setDisplayNums(QString::number(res));
+            firstOperand = res;
+            logInfo() << "hit subtracted";
+            return;
+        }
+        if (isDiv)
+        {
+            isDiv=false;
+        }
+    }
     firstOperand = displayNums().toDouble();
     setDisplayNums(QStringLiteral("0"));
     isSub=true;
+    waitingSecond=true;
     logInfo() << "Ready to subtract";
 }
 
 void DisplayImpl::divclicked()
 {
-
+    if (waitingSecond){
+        if (isMult)
+        {
+            isMult=false;
+        }
+        if (isAdd)
+        {
+            isAdd=false;
+        }
+        if (isSub)
+        {
+            isSub=false;
+        }
+        if (isDiv)
+        {
+           double res = firstOperand / displayNums().toDouble();
+           setDisplayNums(QString::number(res));
+           firstOperand = res;
+           logInfo() << "hit divided twice.";
+           return;
+        }
+    }
     firstOperand = displayNums().toDouble();
     setDisplayNums(QStringLiteral("0"));
     isDiv=true;
+    waitingSecond=true;
     logInfo() << "Ready to divide";
 }
 
@@ -153,5 +251,13 @@ void DisplayImpl::eqclicked()
 
 void DisplayImpl::sqrtclicked()
 {
-
+    firstOperand = displayNums().toDouble();
+    if (firstOperand<0){
+        firstOperand=0;
+        setDisplayNums(QStringLiteral("ERROR"));
+        return;
+    }
+    double res = sqrt(firstOperand);
+    setDisplayNums(QString::number(res));
+    firstOperand=res;
 }

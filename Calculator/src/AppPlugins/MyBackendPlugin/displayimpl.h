@@ -8,7 +8,7 @@ class DisplayImpl : public Calculator::Display
 {
     Q_OBJECT
     double firstOperand;
-    bool isNeg;
+    bool waitingSecond;
     bool isMult;
     bool isAdd;
     bool isSub;
